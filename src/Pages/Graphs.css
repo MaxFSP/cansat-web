@@ -1,0 +1,36 @@
+/* styles.css */
+
+.title {
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  gap: 20px; /* Gap between grid items */
+  padding: 20px; /* Padding around the grid */
+}
+
+.grid-item {
+  border: 1px solid #ccc; /* Add borders for visual separation */
+  padding: 20px; /* Add padding to the grid items */
+}
+
+/* Adjust the size and styling of components inside grid items as needed */
+.grid-item h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 column */
+    grid-template-rows: repeat(4, 1fr); /* 4 rows */
+  }
+
+  .grid-item {
+    border: 1px solid #ccc; /* Add borders for visual separation */
+    padding: 20px; /* Add padding to the grid items */
+  }
+}
