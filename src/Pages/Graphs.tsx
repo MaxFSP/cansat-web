@@ -12,11 +12,6 @@ const Graphs = () => {
     queryFn: fetchLogs,
     refetchInterval: intervalMs,
   });
-  console.log(status, isFetching, error);
-  if (status == "success") {
-    setIntervalMs(10000);
-  }
-
   if (!data) {
     return (
       <>
