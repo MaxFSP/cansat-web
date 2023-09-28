@@ -6,8 +6,8 @@ import { IData, IGraphData } from "../charts/GraphData.Interface";
 import GoogleMap from "../charts/Map";
 import "./Graphs.css";
 const Graphs = () => {
-  const [intervalMs, setIntervalMs] = useState(10000);
-  const { status, data, error, isFetching } = useQuery({
+  const [intervalMs, _setIntervalMs] = useState(10000);
+  const { data } = useQuery({
     queryKey: ["search"],
     queryFn: fetchLogs,
     refetchInterval: intervalMs,
