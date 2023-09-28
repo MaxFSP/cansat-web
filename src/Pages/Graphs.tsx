@@ -7,12 +7,15 @@ import GoogleMap from "../charts/Map";
 import "./Graphs.css";
 const Graphs = () => {
   const [intervalMs, setIntervalMs] = useState(10000);
-
   const { status, data, error, isFetching } = useQuery({
     queryKey: ["search"],
     queryFn: fetchLogs,
     refetchInterval: intervalMs,
   });
+  console.log(status, isFetching, error);
+  if (status == "success") {
+    setIntervalMs(10000);
+  }
 
   if (!data) {
     return (

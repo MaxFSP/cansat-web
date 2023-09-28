@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 interface Iprop {
   gps: string;
@@ -9,8 +9,11 @@ function GoogleMap({ gps }: Iprop) {
     const getNewLocation = () => {
       const ifameData = document.getElementById("iframeId");
       const [lat, lon] = gps.replace("(", "").replace(")", "").split(",");
-
-      ifameData.src = `https://maps.google.com/maps?q=${lat},${lon}&hl=es;&output=embed`;
+      if (ifameData) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        ifameData.src = `https://maps.google.com/maps?q=${lat},${lon}&hl=es;&output=embed`;
+      }
     };
     const timer = setTimeout(() => {
       getNewLocation();
