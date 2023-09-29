@@ -36,8 +36,8 @@ const Graphs = () => {
       );
 
       return {
-        ...log, // Keep the existing properties
-        formattedDate, // Add the formatted date property
+        ...log,
+        formattedDate,
       };
     });
 
