@@ -24,7 +24,7 @@ export default function ResizableBox({
 
   // Adjust the width and height for phone screens
   if (isPhoneSize) {
-    width = screenWidth - 40; // Adjust the width as needed
+    width = screenWidth - 130; // Adjust the width as needed
     height = 350; // Adjust the height as needed
   }
 
