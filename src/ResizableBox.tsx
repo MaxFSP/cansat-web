@@ -13,7 +13,7 @@ export default function ResizableBox({
   className = "",
 }) {
   // Define a breakpoint for when the screen width is considered a phone size
-  const phoneBreakpoint = 768; // You can adjust this value as needed
+  const phoneBreakpoint = 700; // You can adjust this value as needed
 
   // Calculate the width and height based on screen width
   const screenWidth =
@@ -25,7 +25,7 @@ export default function ResizableBox({
   // Adjust the width and height for phone screens
   if (isPhoneSize) {
     width = screenWidth - 40; // Adjust the width as needed
-    height = 300; // Adjust the height as needed
+    height = 350; // Adjust the height as needed
   }
 
   return (
