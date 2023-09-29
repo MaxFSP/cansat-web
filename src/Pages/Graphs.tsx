@@ -5,7 +5,6 @@ import LineChart from "../charts/LineChart";
 import { IData, IGraphData } from "../charts/GraphData.Interface";
 import GoogleMap from "../charts/Map";
 import "./Graphs.css";
-import { ILog } from "../Api/APIResponseTypes";
 const Graphs = () => {
   const [intervalMs, _setIntervalMs] = useState(10000);
   const { data } = useQuery({
@@ -42,7 +41,6 @@ const Graphs = () => {
       };
     });
 
-    console.log(dataV);
     const weather_height_data: IData[] = dataV.map((item) => ({
       primary: item.height,
       secondary: item.weather,
