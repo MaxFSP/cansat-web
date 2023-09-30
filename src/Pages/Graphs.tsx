@@ -42,8 +42,8 @@ const Graphs = () => {
     });
 
     const weather_height_data: IData[] = dataV.map((item) => ({
-      primary: item.height,
-      secondary: item.weather,
+      primary: item.weather,
+      secondary: item.height,
     }));
     const weather_height: IGraphData[] = [
       {
